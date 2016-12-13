@@ -1,0 +1,9 @@
+$sql = "SELECT * FROM Stats_death WHERE (convert(cause using latin1) COLLATE latin1_general_cs) NOT REGEXP \'^[A-Z,_]+$\'";
+INSERT INTO " + getPrefix() + "death (uuid, value, world, cause) VALUES (?, ?, ?, ?)"
+INSERT INTO " + getPrefix() + "death (uuid, value, world, cause) VALUES (?, ?, ?, ?)"
+SELECT * FROM Stats_death WHERE (convert(cause using latin1) COLLATE latin1_general_cs) NOT REGEXP '^[A-Z,_]+$'
+UPDATE * Stats_death SET value=value+? WHERE uuid=? AND world=? AND (convert(cause using latin1) COLLATE latin1_general_cs)=?
+INSERT INTO " Stats3_death (uuid, value, world, cause) VALUES (?, ?, ?, ?)
+SELECT * FROM Stats_death WHERE (convert(cause using latin1) COLLATE latin1_general_cs) NOT REGEXP ^[A-Z,_]+$
+UPDATE * Stats_death SET value=value+? WHERE uuid=? AND world=? AND (convert(cause using latin1) COLLATE latin1_general_cs)=?
+INSERT INTO Stats3_death (uuid, value, world, cause) VALUES (?, ?, ?, ?)
